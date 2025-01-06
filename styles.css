@@ -1,0 +1,183 @@
+/* General reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: #fff;
+  position: relative;
+}
+
+.navbar .brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed position to cover the screen */
+  top: 0;
+  left: 50%; /* Horizontally center the links */
+  transform: translateX(-50%); /* Adjust for the element width */
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  flex-direction: column;
+  justify-content: flex-start; /* Align links to the top */
+  align-items: center; /* Center links horizontally */
+  background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
+  list-style: none;
+  gap: 40px;
+  padding-top: 50px; /* Add spacing from the top */
+  z-index: 1000;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover {
+  color: #00bcd4; /* Highlight color on hover */
+}
+
+.nav-links.active {
+  display: flex; /* Display the links when the menu is active */
+}
+
+.menu-toggle {
+  display: none;
+  width: 30px;
+  cursor: pointer;
+}
+
+/* Hero section */
+.hero {
+    background: linear-gradient(to bottom right, #1a237e, #4a148c);
+    color: #fff;
+    padding: 100px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    text-align: left;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero-content h1 span {
+    color: #ffd700;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: #ffd700;
+    color: #1a237e;
+}
+
+.btn-primary:hover {
+    background: #ffc107;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #ffd700;
+    border: 2px solid #ffd700;
+}
+
+.btn-secondary:hover {
+    background: #ffd700;
+    color: #1a237e;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 5px;
+  animation: float 3s infinite ease-in-out;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Show the menu toggle on small screens */
+  }
+
+  .nav-links {
+    display: none; /* Ensure it's hidden initially */
+  }
+  
+  .nav-links {
+      margin-top: 50px;
+  }
+  
+    .hero-content h1 {
+      font-size: 2.5rem;
+  }
+
+  .hero-content p {
+      font-size: 1rem;
+  }
+
+  .hero-container {
+      flex-direction: column;
+      text-align: center;
+  }
+}
