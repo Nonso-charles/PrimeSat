@@ -321,6 +321,582 @@ body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* On-demand section */
+/* On-Demand Section */
+#on-demand {
+  background: #f9f9f9;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #1a237e;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: #4a148c;
+  margin-bottom: 40px;
+}
+
+.filters {
+  margin-bottom: 30px;
+}
+
+.filters button {
+  background: #1a237e;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.filters button:hover,
+.filters button.active {
+  background: #ffd700;
+  color: #1a237e;
+}
+
+.on-demand-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.on-demand-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.on-demand-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.on-demand-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.on-demand-card h3 {
+  font-size: 1.5rem;
+  color: #1a237e;
+  margin: 10px 0;
+}
+
+.on-demand-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.on-demand-card .btn {
+  display: inline-block;
+  background: #1a237e;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 10px 0;
+  transition: background 0.3s ease;
+}
+
+.on-demand-card .btn:hover {
+  background: #4a148c;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.pagination button {
+    background: #1a237e;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.pagination button.active,
+.pagination button:hover {
+    background: #ffd700;
+    color: #1a237e;
+}
+
+.pagination button.disabled {
+    background: #ddd;
+    color: #aaa;
+    cursor: not-allowed;
+}
+
+.rating {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #ffd700;
+}
+
+.rating span {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Features section */
+.features-section {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+}
+
+.features-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.features-section .section-title {
+    font-size: 2.5rem;
+    color: #1a237e;
+    margin-bottom: 10px;
+}
+
+.features-section .section-description {
+    font-size: 1.2rem;
+    color: #4a148c;
+    margin-bottom: 40px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.feature-item {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.feature-item i {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    font-size: 1.5rem;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+/* Support section */
+.support-section {
+  background-color: #f8f9fa;
+  padding: 60px 20px;
+}
+
+.support-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.support-section .section-title {
+  font-size: 2.5rem;
+  color: #1a237e;
+  margin-bottom: 10px;
+}
+
+.support-section .section-description {
+  font-size: 1.2rem;
+  color: #4a148c;
+  margin-bottom: 40px;
+}
+
+.support-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.support-option {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.support-option h3 {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.support-option p {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.faq-list {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.faq-list li {
+  margin-bottom: 10px;
+}
+
+.faq-list a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.faq-list a:hover {
+  text-decoration: underline;
+}
+
+/* My-account section */
+.my-account-section {
+  background-color: #f8f9fa;
+  padding: 60px 20px;
+}
+
+.my-account-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.my-account-section .section-title {
+  font-size: 2.5rem;
+  color: #1a237e;
+  margin-bottom: 10px;
+}
+
+.my-account-section .section-description {
+  font-size: 1.2rem;
+  color: #4a148c;
+  margin-bottom: 40px;
+}
+
+.account-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.account-info, .subscription-info, .payment-history {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.account-info h3, .subscription-info h3, .payment-history h3 {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.account-info p, .subscription-info p, .payment-history p {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 10px;
+}
+
+.account-info button, .subscription-info button, .payment-history button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.account-info button:hover, .subscription-info button:hover, .payment-history button:hover {
+  background-color: #0056b3;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  margin: 100px auto;
+}
+
+.modal .close {
+  font-size: 1.5rem;
+  color: #aaa;
+  cursor: pointer;
+  float: right;
+}
+
+.modal .close:hover,
+.modal .close:focus {
+  color: #000;
+}
+
+.modal input, .modal button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+.modal button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  background-color: #0056b3;
+}
+
+/* Special-offers section */
+.special-offers-section {
+    background-color: #f4f5f7;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.special-offers-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.special-offers-section .section-title {
+    font-size: 2.5rem;
+    color: #1a237e;
+    margin-bottom: 20px;
+}
+
+.special-offers-section .section-description {
+    font-size: 1.2rem;
+    color: #4a148c;
+    margin-bottom: 40px;
+}
+
+.offers-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.offer-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-10px);
+}
+
+.offer-title {
+    font-size: 1.8rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.offer-description {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+.offer-price {
+    font-size: 1.2rem;
+    color: #28a745;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.offer-card button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.offer-card button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer section */
+.footer-section {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 40px 20px;
+}
+
+.footer-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact,
+.footer-social {
+  flex: 1;
+  min-width: 220px;
+  margin-bottom: 30px;
+}
+
+.footer-about h3,
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 10px 0;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #007bff;
+}
+
+.footer-contact p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.footer-social ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social ul li {
+  display: inline-block;
+}
+
+.footer-social ul li a {
+  color: #ffffff;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.footer-social ul li a:hover {
+  color: #007bff;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 30px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+
 @media (max-width: 768px) {
   .menu-toggle {
     display: block; /* Show the menu toggle on small screens */
@@ -356,4 +932,9 @@ body {
     width: 100%;
     max-width: 350px;
   }
+  
+    .filters button {
+      padding: 8px 15px;
+      font-size: 0.9rem;
+    }
 }
