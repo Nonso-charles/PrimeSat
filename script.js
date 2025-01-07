@@ -1,12 +1,12 @@
-// Select the toggle button and nav-links
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+    // Toggle hamburger menu and search bar visibility
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const searchBar = document.querySelector('.search-bar');
 
-// Toggle the 'active' class on the nav-links when menu icon is clicked
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
-
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        searchBar.classList.toggle('active'); // Toggle the search bar visibility
+    });
 
 // Filter channels by category
 function filterByCategory(category) {

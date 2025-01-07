@@ -4,60 +4,88 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-  padding: 10px 20px;
-  color: #fff;
-  position: relative;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+h1, h2, h3 {
+    font-family: montserrat;
 }
 
-.navbar .brand {
-  font-size: 1.5rem;
-  font-weight: bold;
+p, a {
+    font-family: open sans;
 }
 
-.nav-links {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed position to cover the screen */
-  top: 0;
-  left: 50%; /* Horizontally center the links */
-  transform: translateX(-50%); /* Adjust for the element width */
-  width: 100vw; /* Full viewport width */
-  height: 100vh; /* Full viewport height */
-  flex-direction: column;
-  justify-content: flex-start; /* Align links to the top */
-  align-items: center; /* Center links horizontally */
-  background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
-  list-style: none;
-  gap: 40px;
-  padding-top: 50px; /* Add spacing from the top */
-  z-index: 1000;
-}
+nav {
+      background-color: #232323;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
 
-.nav-links a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.5rem;
-  transition: color 0.3s;
-  text-transform: uppercase;
-}
+    /* Logo */
+    .logo {
+      color: #fff;
+      font-size: 24px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-decoration: none;
+    }
 
-.nav-links a:hover {
-  color: #00bcd4; /* Highlight color on hover */
-}
+    /* Navbar links */
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
 
-.nav-links.active {
-  display: flex; /* Display the links when the menu is active */
-}
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
 
-.menu-toggle {
-  display: none;
-  width: 30px;
-  cursor: pointer;
-}
+    .nav-links a:hover {
+      background-color: #ff6f00;
+    }
+
+    /* Search bar */
+    .search-bar {
+      background-color: #333;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 14px;
+      outline: none;
+      display: none; /* Initially hidden on small screens */
+    }
+
+    .search-bar::placeholder {
+      color: #bbb;
+    }
+
+    /* Hamburger menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      position: absolute;
+      right: 30px; /* Align to the right end */
+    }
+
+    .hamburger div {
+      width: 30px;
+      height: 4px;
+      background-color: #fff;
+      border-radius: 2px;
+    }
 
 /* Hero section */
 .hero {
@@ -90,6 +118,7 @@ body {
 
 .hero-content h1 span {
   color: #ffd700;
+  text-transform: uppercase;
 }
 
 .hero-content p {
@@ -322,7 +351,6 @@ body {
 }
 
 /* On-demand section */
-/* On-Demand Section */
 #on-demand {
   background: #f9f9f9;
   padding: 80px 20px;
@@ -898,17 +926,31 @@ body {
 
 
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block; /* Show the menu toggle on small screens */
-  }
+        nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-  .nav-links {
-    display: none; /* Ensure it's hidden initially */
-  }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin-top: 10px;
+      }
 
-  .nav-links {
-    margin-top: 50px;
-  }
+      .nav-links.active {
+        display: flex;
+      }
+
+      .search-bar.active {
+        display: block; /* Show search bar when active */
+        margin-top: 10px;
+      }
+
+      .hamburger {
+        display: flex;
+      }
 
   .hero-content h1 {
     font-size: 2.5rem;
